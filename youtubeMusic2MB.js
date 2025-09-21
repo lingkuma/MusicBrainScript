@@ -98,7 +98,7 @@
         button.className = 'yt-spec-button-shape-next yt-spec-button-shape-next--text yt-spec-button-shape-next--mono yt-spec-button-shape-next--size-m yt-spec-button-shape-next--icon-only-default yt-spec-button-shape-next--enable-backdrop-filter-experiment';
         button.title = 'Search in MusicBrainz';
         button.setAttribute('aria-label', 'Search in MusicBrainz');
-        button.style.marginRight = '8px';
+        button.style.marginLeft = '8px';
 
         // 添加点击事件
         button.addEventListener('click', function() {
@@ -191,10 +191,10 @@
             const mbButton = createMBButton();
             buttonContainer.appendChild(mbButton);
 
-            // 将按钮添加到操作按钮区域的最前面
-            actionButtons.insertBefore(buttonContainer, actionButtons.firstChild);
+            // 将按钮添加到操作按钮区域的最后面（右侧）
+            actionButtons.appendChild(buttonContainer);
 
-            console.log('MusicBrainz按钮已成功添加到操作按钮区域');
+            console.log('MusicBrainz按钮已成功添加到操作按钮区域右侧');
             return true;
         } catch (error) {
             console.log('无法添加按钮到操作按钮区域:', error.message);
